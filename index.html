@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>hotel management system</title>
+</head>
+<h1>HOTEL MANAGEMENT SYSTEM </h1>
+<div class="navbar">
+    <div class="subnav">
+        <button class="subnavbtn">Insert <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+            <a href="#Hotel">Hotel Details</a>
+            <a href="#Emp">Employee Details</a>
+            <a href="#Cus">Customer Details</a>
+        </div>
+    </div>
+    <div class="subnav">
+        <button class="subnavbtn">Show <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+            <a href="">Hotel Data</a>
+            <a href="">Employee Data</a>
+            <a href="">Customer Data</a>
+        </div>
+    </div>
+    <div class="subnav">
+        <button class="subnavbtn">Delete <i class="fa fa-caret-down"></i></button>
+        <div class="subnav-content">
+            <a href="delHotel.html" target="_blank">Hotel</a>
+            <a href="delEmp.html" target="_blank">Employee</a>
+            <a href="delCust.html" target="_blank">Customer</a>
+        </div>
+    </div>
+</div>
+
+<body>
+    <h3 class="formHeading" id="Hotel">Enter Hotel details</h3>
+    <div class="form-center">
+
+        <form action="hm.php" target="_self" method="post" class="Form">
+            <label for="Hname">Hotel Name</label><br>
+            <input type="text" id="Hname"><br>
+            <label for="=Hot_id">Hotel Id</label><br>
+            <input type="text" id="Reg_id" required><br>
+            <label for="Ad">Address</label><br>
+            <textarea name="Address" id="Ad" cols="40" rows="5"></textarea><br>
+            <label for="Email">Email</label><br>
+            <input type="email" id="Eamil"><br>
+            <label for="hcon">Contact Number</label><br>
+            <input type="tel" id="hcon"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <br><br>
+    <h3 class="formHeading" id="Emp">Enter Employee details</h3>
+    <div class="form-center">
+
+        <form action="hm.php" target="_self" method="post" class="Form">
+
+            <label for="Ename">Employee Name</label><br>
+            <input type="text" id="Ename"><br>
+            <label for="Emp_id">Employee Id</label><br>
+            <input type="text" id="Emp_id" required><br>
+            <label for="age">Age</label><br>
+            <input type="number"><br>
+            <label for="Email">Email</label><br>
+            <input type="email" id="Eamil"><br>
+            <label for="desg">Designation</label><br>
+            <input type="econ" id="desg"><br>
+            <label for="econ">Contact Number</label><br>
+            <input type="tel" id="econ"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+    <h3 class="formHeading" id="Cus">Enter Customer details</h3>
+    <div class="form-center">
+        <form action="hm.php" target="_self" method="post" class="Form">
+            <label for="Cname">Customer Name</label><br>
+            <input type="text" id="Cname"><br>
+            <label for="cus_id">Customer Id</label><br>
+            <input type="text" id="Reg_id" required><br>
+            <label for="Ad">Address</label><br>
+            <textarea name="Address" id="Ad" cols="40" rows="5"></textarea><br>
+            <label for="hcon">Contact Number</label><br>
+            <input type="tel" id="hcon"><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+</body>
+
+</html>
