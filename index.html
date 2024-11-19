@@ -1,94 +1,126 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
-    <title>hotel management system</title>
+    <title>Hotel Management System</title>
 </head>
-<h1>HOTEL MANAGEMENT SYSTEM </h1>
-<div class="navbar">
-    <div class="subnav">
-        <button class="subnavbtn">Insert <i class="fa fa-caret-down"></i></button>
-        <div class="subnav-content">
-            <a href="#Hotel">Hotel Details</a>
-            <a href="#Emp">Employee Details</a>
-            <a href="#Cus">Customer Details</a>
-        </div>
-    </div>
-    <div class="subnav">
-        <button class="subnavbtn">Show <i class="fa fa-caret-down"></i></button>
-        <div class="subnav-content">
-            <a href="">Hotel Data</a>
-            <a href="">Employee Data</a>
-            <a href="">Customer Data</a>
-        </div>
-    </div>
-    <div class="subnav">
-        <button class="subnavbtn">Delete <i class="fa fa-caret-down"></i></button>
-        <div class="subnav-content">
-            <a href="delHotel.html" target="_blank">Hotel</a>
-            <a href="delEmp.html" target="_blank">Employee</a>
-            <a href="delCust.html" target="_blank">Customer</a>
-        </div>
-    </div>
-</div>
-
 <body>
-    <h3 class="formHeading" id="Hotel">Enter Hotel details</h3>
-    <div class="form-center">
+    <header>
+        <h1>HOTEL MANAGEMENT SYSTEM</h1>
+    </header>
 
-        <form action="hm.php" target="_self" method="post" class="Form">
-            <label for="Hname">Hotel Name</label><br>
-            <input type="text" id="Hname"><br>
-            <label for="=Hot_id">Hotel Id</label><br>
-            <input type="text" id="Reg_id" required><br>
-            <label for="Ad">Address</label><br>
-            <textarea name="Address" id="Ad" cols="40" rows="5"></textarea><br>
-            <label for="Email">Email</label><br>
-            <input type="email" id="Eamil"><br>
-            <label for="hcon">Contact Number</label><br>
-            <input type="tel" id="hcon"><br><br>
-            <input type="submit" value="Submit">
-        </form>
-    </div>
-    <br><br>
-    <h3 class="formHeading" id="Emp">Enter Employee details</h3>
-    <div class="form-center">
+    <nav class="navbar">
+        <div class="subnav">
+            <button class="subnavbtn">Insert</button>
+            <div class="subnav-content">
+                <a href="#Hotel">Hotel Details</a>
+                <a href="#Emp">Employee Details</a>
+                <a href="#Cus">Customer Details</a>
+            </div>
+        </div>
+        <div class="subnav">
+            <button class="subnavbtn">Delete</button>
+            <div class="subnav-content">
+                <a href="#deleteHotel">Delete Hotel</a>
+                <a href="#deleteEmp">Delete Employee</a>
+                <a href="#deleteCus">Delete Customer</a>
+            </div>
+        </div>
+    </nav>
 
-        <form action="hm.php" target="_self" method="post" class="Form">
+    <!-- Insert Hotel -->
+    <section id="Hotel">
+        <h3>Enter Hotel Details</h3>
+        <form id="hotelForm">
+            <label for="hotelName">Hotel Name:</label><br>
+            <input type="text" id="hotelName" name="hotelName" required><br>
+            <label for="hotelId">Hotel ID:</label><br>
+            <input type="text" id="hotelId" name="hotelId" required><br>
+            <label for="hotelAddress">Address:</label><br>
+            <textarea name="hotelAddress" id="hotelAddress" cols="30" rows="3" required></textarea><br>
+            <label for="hotelEmail">Email:</label><br>
+            <input type="email" id="hotelEmail" name="hotelEmail" required><br>
+            <label for="hotelPhone">Contact Number:</label><br>
+            <input type="tel" id="hotelPhone" name="hotelPhone" required><br><br>
+            <button type="submit">Submit</button>
+        </form>
+        <p id="hotelMessage"></p>
+    </section>
 
-            <label for="Ename">Employee Name</label><br>
-            <input type="text" id="Ename"><br>
-            <label for="Emp_id">Employee Id</label><br>
-            <input type="text" id="Emp_id" required><br>
-            <label for="age">Age</label><br>
-            <input type="number"><br>
-            <label for="Email">Email</label><br>
-            <input type="email" id="Eamil"><br>
-            <label for="desg">Designation</label><br>
-            <input type="econ" id="desg"><br>
-            <label for="econ">Contact Number</label><br>
-            <input type="tel" id="econ"><br><br>
-            <input type="submit" value="Submit">
+    <!-- Insert Employee -->
+    <section id="Emp">
+        <h3>Enter Employee Details</h3>
+        <form id="employeeForm">
+            <label for="empName">Employee Name:</label><br>
+            <input type="text" id="empName" name="empName" required><br>
+            <label for="empId">Employee ID:</label><br>
+            <input type="text" id="empId" name="empId" required><br>
+            <label for="empAge">Age:</label><br>
+            <input type="number" name="empAge" id="empAge" required><br>
+            <label for="empEmail">Email:</label><br>
+            <input type="email" id="empEmail" name="empEmail" required><br>
+            <label for="empDesg">Designation:</label><br>
+            <input type="text" id="empDesg" name="empDesg" required><br>
+            <label for="empPhone">Contact Number:</label><br>
+            <input type="tel" id="empPhone" name="empPhone" required><br><br>
+            <button type="submit">Submit</button>
         </form>
-    </div>
-    <h3 class="formHeading" id="Cus">Enter Customer details</h3>
-    <div class="form-center">
-        <form action="hm.php" target="_self" method="post" class="Form">
-            <label for="Cname">Customer Name</label><br>
-            <input type="text" id="Cname"><br>
-            <label for="cus_id">Customer Id</label><br>
-            <input type="text" id="Reg_id" required><br>
-            <label for="Ad">Address</label><br>
-            <textarea name="Address" id="Ad" cols="40" rows="5"></textarea><br>
-            <label for="hcon">Contact Number</label><br>
-            <input type="tel" id="hcon"><br><br>
-            <input type="submit" value="Submit">
+        <p id="employeeMessage"></p>
+    </section>
+
+    <!-- Insert Customer -->
+    <section id="Cus">
+        <h3>Enter Customer Details</h3>
+        <form id="customerForm">
+            <label for="cusName">Customer Name:</label><br>
+            <input type="text" id="cusName" name="cusName" required><br>
+            <label for="cusId">Customer ID:</label><br>
+            <input type="text" id="cusId" name="cusId" required><br>
+            <label for="cusAddress">Address:</label><br>
+            <textarea name="cusAddress" id="cusAddress" cols="30" rows="3" required></textarea><br>
+            <label for="cusPhone">Contact Number:</label><br>
+            <input type="tel" id="cusPhone" name="cusPhone" required><br><br>
+            <button type="submit">Submit</button>
         </form>
-    </div>
+        <p id="customerMessage"></p>
+    </section>
+
+    <!-- Delete Hotel -->
+    <section id="deleteHotel">
+        <h3>Delete Hotel</h3>
+        <form id="deleteHotelForm">
+            <label for="deleteHotelId">Enter Hotel ID:</label><br>
+            <input type="text" id="deleteHotelId" name="hotelId" required><br><br>
+            <button type="submit">Delete</button>
+        </form>
+        <p id="deleteHotelMessage"></p>
+    </section>
+
+    <!-- Delete Employee -->
+    <section id="deleteEmp">
+        <h3>Delete Employee</h3>
+        <form id="deleteEmployeeForm">
+            <label for="deleteEmpId">Enter Employee ID:</label><br>
+            <input type="text" id="deleteEmpId" name="empId" required><br><br>
+            <button type="submit">Delete</button>
+        </form>
+        <p id="deleteEmployeeMessage"></p>
+    </section>
+
+    <!-- Delete Customer -->
+    <section id="deleteCus">
+        <h3>Delete Customer</h3>
+        <form id="deleteCustomerForm">
+            <label for="deleteCusId">Enter Customer ID:</label><br>
+            <input type="text" id="deleteCusId" name="cusId" required><br><br>
+            <button type="submit">Delete</button>
+        </form>
+        <p id="deleteCustomerMessage"></p>
+    </section>
+
+    <script src="app.js"></script>
 </body>
-
 </html>
